@@ -3,10 +3,9 @@ import { PostModel } from "../models/PostModel.js";
 export const getPosts = async (req, res) => {
   try {
     const posts = await PostModel.find();
-    console.log("posts:", posts);
     res.status(200).json(posts);
-  } catch (error) {
-    res.status(500).json({ error: error });
+  } catch (err) {
+    res.status(500).json({ error: err });
   }
 };
 
@@ -18,8 +17,8 @@ export const createPost = async (req, res) => {
     await post.save();
 
     res.status(200).json(post);
-  } catch (error) {
-    res.status(500).json({ error: error });
+  } catch (err) {
+    res.status(500).json({ error: err });
   }
 };
 
@@ -34,7 +33,7 @@ export const updatePost = async (req, res) => {
     );
 
     res.status(200).json(post);
-  } catch (error) {
-    res.status(500).json({ error: error });
+  } catch (err) {
+    res.status(500).json({ error: err });
   }
 };
