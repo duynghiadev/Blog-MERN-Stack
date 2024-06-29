@@ -1,7 +1,8 @@
+import React from "react";
 import { Typography } from "@material-ui/core";
 import useStyles from "./styles";
 
-const Header = () => {
+export default function Header() {
   const classes = useStyles();
 
   return (
@@ -9,6 +10,4 @@ const Header = () => {
       Blog
     </Typography>
   );
-};
-
-export default Header;
+}
