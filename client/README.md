@@ -7,3 +7,13 @@ Thì redux-saga nó là 1 middleware, nó được nằm giữa Action và Reduc
 Ở trong redux-saga thì có 1 khái niệm là effect. Và khi sử dụng redux-saga thì có rất nhiều effect -> chúng ta cùng tìm hiểu các effect đó là gì trong project này nhé
 
 ![alt text](image.png)
+
+---
+
+Một action thì luôn có 3 điều kiện xảy ra, đó là:
+
+- Thứ nhất: gửi request
+- Thứ hai: khi data success (thành công)
+- Thứ ba: Khi data failed (lỗi)
+
+Action là 1 dạng object, có: type và payload
