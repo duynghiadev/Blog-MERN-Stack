@@ -7,10 +7,12 @@ export default function modalReducers(state = INIT_STATE.modal, action) {
       return {
         isShow: true,
       };
+
     case getType(hideModal):
       return {
         isShow: false,
       };
+
     default:
       return state;
   }

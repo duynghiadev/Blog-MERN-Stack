@@ -1,13 +1,13 @@
 import { Button, Modal, TextareaAutosize, TextField } from "@material-ui/core";
+import React, { useCallback, useState } from "react";
 import FileBase64 from "react-file-base64";
-import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { createPost, hideModal } from "../../redux/actions";
 import { modalState$ } from "../../redux/selectors";
 import useStyles from "./styles";
-import { createPost, hideModal } from "../../redux/actions";
 
 export default function CreatePostModal() {
-  const [data, setData] = React.useState({
+  const [data, setData] = useState({
     title: "",
     content: "",
     attachment: "",
@@ -16,7 +16,7 @@ export default function CreatePostModal() {
   const { isShow } = useSelector(modalState$);
   const classes = useStyles();
 
-  const onClose = React.useCallback(() => {
+  const onClose = useCallback(() => {
     dispatch(hideModal());
     setData({
       title: "",
@@ -25,7 +25,7 @@ export default function CreatePostModal() {
     });
   }, [dispatch]);
 
-  const onSubmit = React.useCallback(() => {
+  const onSubmit = useCallback(() => {
     dispatch(createPost.createPostRequest(data));
     onClose();
   }, [data, dispatch, onClose]);

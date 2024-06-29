@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Avatar,
   Card,
@@ -9,18 +8,19 @@ import {
   IconButton,
   Typography,
 } from "@material-ui/core";
-import MoreVertIcon from "@material-ui/icons/MoreVert";
 import FavoriteIcon from "@material-ui/icons/Favorite";
+import MoreVertIcon from "@material-ui/icons/MoreVert";
 import moment from "moment";
-import useStyles from "./styles";
+import React, { useCallback } from "react";
 import { useDispatch } from "react-redux";
 import { updatePost } from "../../../redux/actions";
+import useStyles from "./styles";
 
 export default function Post({ post }) {
   const classes = useStyles();
   const dispatch = useDispatch();
 
-  const onLikeBtnClick = React.useCallback(() => {
+  const onLikeBtnClick = useCallback(() => {
     dispatch(
       updatePost.updatePostRequest({ ...post, likeCount: post.likeCount + 1 })
     );
