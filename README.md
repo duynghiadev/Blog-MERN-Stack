@@ -2,6 +2,10 @@
 
 This repository contains the client-side code for the MERN stack application. It is built using ReactJS and communicates with the backend server to fetch and display data.
 
+✔ [Link client](https://blog-mern-stack-duynghiadev.netlify.app/)
+
+✔ [Link server](https://blog-mern-stack-chi.vercel.app/posts)
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -17,27 +21,27 @@ To set up the project locally, follow these steps:
 1. **Clone the repository:**
 
    ```sh
-   git clone https://github.com/holetexvn/mern-app-client.git
-   cd mern-app-client
+   git clone https://github.com/duynghiadev/Blog-MERN-Stack
+   cd client
    ```
 
 2. **Install dependencies:**
 
    ```sh
-   npm install
+   npm install or yarn
    ```
 
 3. **Start the development server:**
 
    ```sh
-   npm start
+   npm start or yarn dev
    ```
 
-   The application will be running at `http://localhost:3000`.
+   The application will be running at `http://localhost:3000` or `http://localhost:5173`.
 
 ## Usage
 
-Once the development server is running, you can access the application at `http://localhost:3000`. Make sure the backend server is also running to fetch data properly.
+Once the development server is running, you can access the application at `http://localhost:3000` or `http://localhost:5173`. Make sure the backend server is also running to fetch data properly.
 
 ## Features
 
@@ -83,8 +87,8 @@ To set up the project locally, follow these steps:
 1. **Clone the repository:**
 
    ```sh
-   git clone https://github.com/holetexvn/mern-app-server.git
-   cd mern-app-server
+   git clone https://github.com/duynghiadev/Blog-MERN-Stack
+   cd server
    ```
 
 2. **Install dependencies:**
@@ -117,6 +121,12 @@ Ensure the MongoDB server is running and the `MONGO_URI` is correctly configured
 ## API Endpoints
 
 Here are some of the main API endpoints:
+
+🚀 Main features
+
+- `GET /posts` - Get all information of user
+
+🚀 Additional features to be added later
 
 - `POST /api/auth/register` - Register a new user
 - `POST /api/auth/login` - Login an existing user
