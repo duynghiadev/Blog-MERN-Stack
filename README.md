@@ -2,9 +2,17 @@
 
 This repository contains the client-side code for the MERN stack application. It is built using ReactJS and communicates with the backend server to fetch and display data.
 
+1. client
+
 ✔ [Link client](https://blog-mern-stack-duynghiadev.netlify.app/)
 
+✔ [Website netlify](https://app.netlify.com/sites/blog-mern-stack-duynghiadev/overview)
+
+2. server
+
 ✔ [Link server](https://blog-mern-stack-chi.vercel.app/posts)
+
+✔ [Website vercel](https://vercel.com/duynghiadevs-projects/blog-mern-stack)
 
 ## Table of Contents
 
